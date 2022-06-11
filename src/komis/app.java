@@ -9,17 +9,13 @@ public class app {
         KomisSamochodow komisSamochodow = new KomisSamochodow();
 
 
-        String identyfikator = odczytajparametr (nazwaParametru: "identyfikator");
-        String marka = odczytajparametr(nazwaParametru:"marka");
-        String model = odczytajparametr(nazwaParametru:"model");
-        String rocznik = odczytajparametr(nazwaParametru:"rocznik");
-
+        String identyfikator = odczytajparametr ("identyfikator");
+        String marka = odczytajparametr("marka");
+        String model = odczytajparametr("model");
+        String rocznik = odczytajparametr("rocznik");
         samochod Samochod =
                 new samochod(identyfikator, marka, model, Integer.valueOf(rocznik));
-
-        System.out.println(Samochod);
-
-        komisSamochodow.dodajSamochod(Samochod);
+        komisSamochodow.dodajSamochod(Samochod); //odczytanie danych i dodanie do komisu
 
         komisSamochodow.wyswietlWszystkieSamochody();
     }
