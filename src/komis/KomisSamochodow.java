@@ -11,8 +11,16 @@ public class KomisSamochodow {
     //metoda dodawania aut
 
     public void dodajSamochod(samochod Samochod) {
-        samochody.put(Samochod.getId(), Samochod);
+        samochody.put(Samochod.getIdentyfikator(), Samochod);
 
+    }
 
+    //metoda do wyswietlania samochodow
+
+    public void wyswietlWszystkieSamochody(){
+        System.out.println("Wszystkie samochody:");
+        for (samochod Samochod : samochody.values()){
+            System.out.println(Samochod);
+        }
     }
 }

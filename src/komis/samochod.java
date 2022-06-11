@@ -1,14 +1,14 @@
 package komis;  // obiekt samochodu z danymi - kontruktor
 
 public class samochod {
-    private String id;
+    private String identyfikator;
     private String marka;
     private String model;
     private int rocznik;
 
     //kazdy samochod ma id marke model rocznik
-    public samochod(String id, String marka, String model, int rocznik) {
-        this.id = id;
+    public samochod(String identyfikator, String marka, String model, int rocznik) {
+        this.identyfikator = identyfikator;
         this.marka = marka;
         this.model = model;
         this.rocznik = rocznik;
@@ -16,8 +16,8 @@ public class samochod {
 
     //gettery
 
-    public String getId() {
-        return id;
+    public String getIdentyfikator() {
+        return identyfikator;
     }
 
     public String getMarka() {
@@ -32,5 +32,14 @@ public class samochod {
         return rocznik;
     }
 
-
+    //metoda
+    @Override
+    public String toString() {
+        return "samochod{" +
+                "identyfikator='" + identyfikator + '\'' +
+                ", marka='" + marka + '\'' +
+                ", model='" + model + '\'' +
+                ", rocznik=" + rocznik +
+                '}';
+    }
 }
